@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div id="box">
+        <div class="sign">
+            <h1 onclick="signIn()" id="si">Sign In</h1>
+            <h1 onclick="signUp()" id="su">Sign Up</h1>
+        </div>
+        <div id="signup">
+            <form action="" onsubmit="signUpSubmit(event)">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="cpassword" placeholder="Confirm Password" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="submit" value="Submit" class="sub">
+            </form>
+        </div>
+        <div id="signin">
+            <form action="" onsubmit="signInSubmit(event)">
+            <input type="email" id="email1" placeholder="Email">
+            <input type="password" id="password2" placeholder="Password">
+            <input type="submit" value="Submit" class="sub">
+        </form>
+        </div>
+    </div>
+    <div id="menu">
+        <ol>
+            <li onclick="home()">Home</li>
+            <li onclick="medicine()">Medicine name</li>
+            <li onclick="purchase()">Purchase</li>
+            <li onclick="cancel()">cancel</li>
+            <li onclick="topup()">top up</li>
+            <li onclick="show()">show balance</li>
+            <li onclick="order()">order History</li>
+        </ol>
+    </div>
+    <div id="home">
+        <h1 id="welcome"></h1>
+    </div>
+    <div id="medicine">
+        <table id="tb">
+           <tr>
+                <th>Medicine Name</th>
+                <th>Medicine Price</th>
+                <th>Quantity</th>
+                <th>Expiry Date</th>
+                <th>Modify</th>
+           </tr>
+        </table>
+    </div>
+    <div id="purchase">
+        <table id="tb1">
+            <tr>
+                 <th>Medicine Name</th>
+                 <th>Medicine Price</th>
+                 <th>Quantity</th>
+                 <th>Expiry Date</th>
+                 <th>Modify</th>
+            </tr>
+         </table>
+    </div>
+    <div id="cancel">
+        <table id="tb2">
+            <tr>
+                <th>Order ID</th>
+                <th>User ID</th>
+                <th>Medicine ID</th>
+                <th>Quantity</th>
+                <th>TotalPice</th>
+                <th>OrderDate</th>
+                <th>Cancel</th>
+            </tr>
+         </table>
+    </div>
+    <div id="top">
+        <input type="number" placeholder="Enter the Amount " id="amount" required>
+        <button onclick="deposit()">Deposit</button>
+    </div>
+    <div id="show">
+        <h1 id="balance"></h1>
+    </div>
+    <div id="order">
+        <table id="tb3">
+            <tr>
+                 <th>Order ID</th>
+                 <th>User ID</th>
+                 <th>Medicine ID</th>
+                 <th>Quantity</th>
+                 <th>TotalPice</th>
+                 <th>OrderDate</th>
+                 <th>Orderstatus</th>
+            </tr>
+         </table>
+    </div>
+    <script type="text/javascript" src="Typescript/index.js"></script>
+</body>
+</html>
