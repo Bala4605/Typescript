@@ -133,6 +133,8 @@ function signInSubmit(e) {
             isavail = false;
             currentUser = val;
             home();
+            email.value = "";
+            password.value = "";
         }
     });
     if (isavail) {
@@ -153,7 +155,14 @@ function displayNone() {
     topp.style.display = "none";
     showw.style.display = "none";
     orderr.style.display = "none";
+    ff.style.display = "none";
 }
+var ff = document.getElementById("form1");
+var aa = document.getElementById("medicineName");
+var bb = document.getElementById("medicineCount");
+var cc = document.getElementById("medicinePrice");
+var dd = document.getElementById("expiryDate");
+var curIndex = null;
 function medicine() {
     displayNone();
     medicinee.style.display = "block";
@@ -178,8 +187,28 @@ function medicine() {
         var g = document.createElement("td");
         var h = document.createElement("button");
         h.innerHTML = "Edit";
+        h.addEventListener("click", function () {
+            curIndex = val.MedicineId;
+            ff.style.display = "block";
+            aa.value = val.MedicineName;
+            bb.value = val.MedicineCount + "";
+            cc.value = val.MedicinePrice + "";
+            var da = val.ExpiryDate.getDate();
+            var mm = val.ExpiryDate.getMonth() + 1;
+            if (mm < 10) {
+                mm = "0" + mm;
+            }
+            if (da < 10) {
+                da = "0" + da;
+            }
+            dd.value = "".concat(val.ExpiryDate.getFullYear(), "-").concat(mm, "-").concat(da);
+        });
         var i = document.createElement("button");
         i.innerHTML = "Delete";
+        i.addEventListener("click", function () {
+            MedicineList = MedicineList.filter(function (v) { return v.MedicineId != val.MedicineId; });
+            medicine();
+        });
         g.appendChild(h);
         g.appendChild(i);
         b.appendChild(c);
@@ -281,7 +310,7 @@ function purchase() {
             if (val.ExpiryDate > new Date()) {
                 if (Number(c) <= val.MedicineCount) {
                     var amt = Number(c) * val.MedicinePrice;
-                    if (amt < currentUser.Amount) {
+                    if (amt <= currentUser.Amount) {
                         OrderList.push(new Order(currentUser.UserId, val.MedicineId, Number(c), amt, new Date(), orderStatus.purchased));
                         val.MedicineCount -= Number(c);
                         currentUser.Amount -= amt;
@@ -352,10 +381,49 @@ function order() {
 function topup() {
     displayNone();
     topp.style.display = "block";
+    document.getElementById("curBalance").innerHTML = "Available Balance :".concat(currentUser.Amount);
 }
 function deposit() {
     var a = document.getElementById("amount");
     currentUser.Amount += Number(a.value);
     alert("Amount Dposited Successfully");
     a.value = "";
+    document.getElementById("curBalance").innerHTML = "Available Balance :".concat(currentUser.Amount);
+}
+function addMedicine() {
+    var dateSplit = dd.value.split("-");
+    console.log(dd.value);
+    console.log(dateSplit);
+    // displayNone();
+    // medicinee.style.display="block";
+    document.getElementById("form1").style.display = "block";
+    ff.style.display = "block";
+    if (curIndex != null) {
+        MedicineList.forEach(function (value) {
+            if (value.MedicineId == curIndex) {
+                value.MedicineName = aa.value;
+                value.MedicineCount = Number(bb.value);
+                value.MedicinePrice = Number(cc.value);
+                value.ExpiryDate = new Date(Number(dateSplit[0]), (Number(dateSplit[1]) - 1), (Number(dateSplit[2])));
+            }
+        });
+    }
+    else {
+        if (aa.value.trim() != "") {
+            MedicineList.push(new MedicineInfo(aa.value, Number(bb.value), Number(cc.value), new Date(Number(dateSplit[0]), (Number(dateSplit[1]) - 1), Number(dateSplit[2]))));
+        }
+    }
+    aa.value = "";
+    bb.value = "";
+    cc.value = "";
+    dd.value = "";
+    curIndex = null;
+    medicine();
+    ff.style.display = "block";
+}
+function Logout() {
+    displayNone();
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("box").style.display = "block";
+    currentUser = null;
 }

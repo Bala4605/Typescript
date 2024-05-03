@@ -40,12 +40,14 @@
             <li onclick="topup()">top up</li>
             <li onclick="show()">show balance</li>
             <li onclick="order()">order History</li>
+            <li onclick="Logout()">Log Out</li>
         </ol>
     </div>
     <div id="home">
         <h1 id="welcome"></h1>
     </div>
     <div id="medicine">
+        <button onclick="addMedicine()" id="medButton">Add Medicine</button>
         <table id="tb">
            <tr>
                 <th>Medicine Name</th>
@@ -63,7 +65,7 @@
                  <th>Medicine Price</th>
                  <th>Quantity</th>
                  <th>Expiry Date</th>
-                 <th>Modify</th>
+                 <th>Action</th>
             </tr>
          </table>
     </div>
@@ -81,6 +83,7 @@
          </table>
     </div>
     <div id="top">
+        <h1 id="curBalance"></h1>
         <input type="number" placeholder="Enter the Amount " id="amount" required>
         <button onclick="deposit()">Deposit</button>
     </div>
@@ -99,6 +102,14 @@
                  <th>Orderstatus</th>
             </tr>
          </table>
+    </div>
+    <div id="form1">
+        <h1>Medicine Details</h1>
+        <input type="text" id="medicineName" placeholder="medicine name">
+        <input type="text" id="medicineCount" placeholder="medicine count">
+        <input type="text" id="medicinePrice" placeholder="medicine price">
+        <input type="date" id="expiryDate" placeholder="expiry Date">
+        <button onclick="addMedicine()">submit</button>
     </div>
     <script type="text/javascript" src="Typescript/index.js"></script>
 </body>

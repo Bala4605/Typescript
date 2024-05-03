@@ -82,7 +82,7 @@
     border: 2px solid orangered;
     box-shadow: 2px 2px 2px gray;
 }
-#welcome,#balance{
+#welcome,#balance,#curBalance{
     font-size: 5rem;
     text-align: center;
 }
@@ -111,8 +111,20 @@
 #top{
     display: none;
 }
+#medButton{
+    display: block;
+    width: 10%;
+    border: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    margin:5vh auto ;
+    background-color: green; 
+}
 #medicine,#purchase,#order,#cancel{
     margin-top: 10vh;
+    margin-bottom:5vh;
     display: none;
 }
 #tb,#tb1,#tb3,#tb2{
@@ -148,4 +160,41 @@
 #tb td button:nth-child(2){
     background-color: red;
   
+}
+
+#form1{
+    margin-top: 5vh;
+    display: none;
+    width:40%;
+    margin: auto;
+    border:2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+#form1 input{
+    width: 50%;
+    margin:2% auto;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    text-indent: 3%;
+    border-radius: 10px;
+    border: 2px solid blue;
+    box-shadow: 2px 2px 2px gray;
+    display: block;
+}
+#form1 h1{
+    text-align: center;
+}
+#form1 button{
+    display: block;
+    width: 50%;
+    border: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    margin: auto;
+    background-color: green;
+    /* margin: 0px 5px; */
+
 }
