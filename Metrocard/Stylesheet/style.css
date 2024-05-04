@@ -1,0 +1,138 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.sign{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+}
+.sign h1:nth-child(1){
+    /* background-color:orange; */
+    border-radius: 10px;
+    padding: 5px;
+}
+.sign h1:nth-child(2){
+    background-color:orange;
+    border-radius: 10px;
+    padding: 5px;
+}
+#box{
+    width: 50%;
+    margin: 20vh auto;
+}
+#menu{
+    display:none;
+}
+#menu ol{
+    display: flex;
+    list-style-type: none;
+    width:80%;
+    margin: auto;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    color:white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+#menu ol li{
+    padding: 10px;
+    border-radius: 10px;
+}
+#menu ol li:hover{
+    background-color:lightskyblue ;
+    color: black;
+    
+}
+#signup{
+    padding: 20px;
+    border:2px solid green;
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+}
+#signin{
+    padding: 20px;
+    border:2px solid green;
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+    display:none;
+}
+#signup input,#signin input{
+    width: 100%;
+    margin:2% auto;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    text-indent: 3%;
+    border-radius: 10px;
+    border: 2px solid blue;
+    box-shadow: 2px 2px 2px gray;
+
+}
+.sub{
+    width: 100%;
+    margin:2% auto;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    border: 2px solid orangered;
+    box-shadow: 2px 2px 2px gray;
+}
+#welcome,#balance,#curBalance{
+    font-size: 5rem;
+    text-align: center;
+}
+#top input{
+    width: 40%;
+    margin:2% auto;
+    line-height: 4rem;
+    font-size: 2rem;
+    text-indent: 3%;
+    border-radius: 10px;
+    border: 2px solid blue;
+    box-shadow: 2px 2px 2px gray;
+    display: block;
+}
+#top button{
+    display: block;
+    margin: auto;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    border: 2px solid green;
+    box-shadow: 2px 2px 2px gray;
+}
+#top{
+    display: none;
+}
+#history,#travel{
+    margin-top: 10vh;
+    margin-bottom:5vh;
+    display: none;
+}
+#tb,#tb1{
+    width:70%;
+    margin: auto;
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+#tb td,#tb th,#tb1 td,#tb1 th{
+    text-align: center;
+    border: 2px solid gray;
+    padding: 5px;
+}
+#tb td button{
+    border: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    margin: 0px 5px;
+    background-color: green;
+}

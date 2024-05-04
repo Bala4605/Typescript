@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Stylesheet/style.css">
+</head>
+<body>
+    <div id="box">
+        <div class="sign">
+            <h1 onclick="signIn()" id="si">Sign In</h1>
+            <h1 onclick="signUp()" id="su">Sign Up</h1>
+        </div>
+        <div id="signup">
+            <form action="" onsubmit="signUpSubmit(event)">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="cpassword" placeholder="Confirm Password" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="submit" value="Submit" class="sub">
+            </form>
+        </div>
+        <div id="signin">
+            <form action="" onsubmit="signInSubmit(event)">
+            <input type="email" id="email1" placeholder="Email">
+            <input type="password" id="password2" placeholder="Password">
+            <input type="submit" value="Submit" class="sub">
+        </form>
+        </div>
+    </div>
+    <div id="menu">
+        <ol>
+            <li onclick="home()">Home</li>
+            <li onclick="balance()">Balance</li>
+            <li onclick="recharge()">Recharge</li>
+            <li onclick="trHistory()">Travel History</li>
+            <li onclick="travel()">Book Ticket</li>
+            <li onclick="Logout()">Log Out</li>
+        </ol>
+    </div>
+    <div id="home">
+        <h1 id="welcome"></h1>
+    </div>
+    <div id="show">
+        <h1 id="balance"></h1>
+    </div>
+    <div id="top">
+        <h1 id="curBalance"></h1>
+        <input type="number" placeholder="Enter the Amount " id="amount" required>
+        <button onclick="deposit()">Deposit</button>
+    </div>
+    <div id="history">
+        <table id="tb1">
+            <thead>
+              <th>Travel ID</th>
+              <th>User ID</th>
+              <th>From</th>
+              <th>To</th>
+              <th>Travel Date</th>
+              <th>Ticket Fair</th>
+             
+          </thead>  
+          <tbody id="tbodyData1">
+               
+          </tbody>   
+          </table>
+    </div>
+    <div id="travel">
+        <table id="tb">
+          <thead>
+            <th>From</th>
+            <th>To</th>
+            <th>Ticket Fair</th>
+            <th>Book</th>
+        </thead>  
+        <tbody id="tbodyData">
+             
+        </tbody>   
+        </table>
+
+    </div>
+    <script src="Typescript/index.js"></script>
+</body>
+</html>
