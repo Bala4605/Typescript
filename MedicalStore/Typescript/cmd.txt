@@ -1,0 +1,95 @@
+// class User {
+
+//     UserId: string;
+//     Name:string;
+//     Email: string;
+//     Password: string;
+//     UserPhoneNumber: string;
+//     Amount:number=0;
+
+//     constructor(name:string,email: string,password : string, paramUserPhoneNumber: string) {
+
+//         UserIdAutoIncrement++;
+
+//         this.UserId = "UID" + UserIdAutoIncrement.toString();
+//         this.Name=name;
+//         this.Email = email;
+//         this.Password = password;
+//         this.UserPhoneNumber = paramUserPhoneNumber;
+//     }
+
+// }
+// class MedicineInfo {
+
+//     MedicineId: string;
+//     MedicineName: string;
+//     MedicineCount: number;
+//     MedicinePrice: number;
+//     ExpiryDate:Date
+    
+
+//     constructor(paramMedicineName: string, paramMedicineCount: number, paramMedicinePrice: number,expiryDate:Date) {
+//         MedicineIdAutoIncrement++;
+
+//         this.MedicineId = "MD" + MedicineIdAutoIncrement.toString();
+//         this.MedicineName = paramMedicineName;
+//         this.MedicineCount = paramMedicineCount;
+//         this.MedicinePrice = paramMedicinePrice;
+//         this.ExpiryDate=expiryDate;
+//     }
+
+// }
+// enum orderStatus{
+//     purchased='purchased',
+//     cancelled='cancelled'
+// }
+
+// class Order {
+//     OrderId: string;
+//     MedicineId: string;
+//     UserId: string;
+//     Total:number;
+
+//     MedicineName: string;
+//     MedicineCount: number;
+//     PurchaseStatus:orderStatus;
+//     OrderDate:Date;
+
+//     constructor(userID: string, medicineID: string,Count: number,total:number,date:Date,order:orderStatus) {
+//         OrderIdAutoIncrement++;
+
+//         this.OrderId = "OID" + OrderIdAutoIncrement.toString();
+//         this.MedicineId = medicineID;
+//         this.UserId = userID;
+//         this.Total=total;
+//         this.OrderDate=date;
+//         // this.MedicineName = paramMedicineName;
+//         this.MedicineCount =Count;
+//         this.PurchaseStatus=order;
+//     }
+// }
+let UserIdAutoIncrement = 1000;
+let MedicineIdAutoIncrement = 100;
+let OrderIdAutoIncrement = 2000;
+
+
+// let UserArrayList: Array<UserInfo> = new Array<UserInfo>();
+
+// UserArrayList.push(new User("Ravi","Ravi@gmail.com", "12345678", "9789011226"));
+// UserArrayList.push(new User("Baskaran","Baskaran@gmail.com", "12345678", "9445153060"));
+
+// let MedicineList: Array<Medicine> = new Array<Medicine>();
+
+// MedicineList.push(new MedicineInfo("Paracetomol", 5, 5,new Date(2024,6,30)));
+// MedicineList.push(new MedicineInfo("Colpal", 5, 5,new Date(2024,5,30)));
+// MedicineList.push(new MedicineInfo("Gelucil", 5, 40,new Date(2024,4,30)));
+// MedicineList.push(new MedicineInfo("Metrogel", 5, 50,new Date(2024,12,30)));
+// MedicineList.push(new MedicineInfo("Povidin Iodin", 5, 50,new Date(2024,10,30)));
+
+// let OrderList: Array<OrderInfo> = new Array<OrderInfo>();
+// OrderList.push(new Order("UID1001","MD101",3,15,new Date(2022,11,13),orderStatus.purchased));
+// OrderList.push(new Order("UID1001","MD102",2,10,new Date(2022,11,13),orderStatus.cancelled));
+// OrderList.push(new Order("UID1001","MD104",3,100,new Date(2022,11,13),orderStatus.purchased));
+// OrderList.push(new Order("UID1002","MD103",3,120,new Date(2022,11,13),orderStatus.cancelled));
+// OrderList.push(new Order("UID1002","MD105",5,250,new Date(2022,11,13),orderStatus.purchased));
+// OrderList.push(new Order("UID1002","MD102",3,15,new Date(2022,11,13),orderStatus.purchased));
