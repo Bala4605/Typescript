@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="box">
+        <div class="sign">
+            <h1 onclick="signIn()" id="si">Sign In</h1>
+            <h1 onclick="signUp()" id="su">Sign Up</h1>
+        </div>
+        <div id="signup">
+            <form action="" onsubmit="signUpSubmit(event)">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="cpassword" placeholder="Confirm Password" required>
+            <input type="file" id="fileElement" required>
+            <!-- <input type="text" id="phone" placeholder="Phone Number" required> -->
+            <input type="submit" value="Submit" class="sub">
+            </form>
+        </div>
+        <div id="signin">
+            <form action="" onsubmit="signInSubmit(event)">
+            <input type="email" id="email1" placeholder="Email">
+            <input type="password" id="password2" placeholder="Password">
+            <input type="submit" value="Submit" class="sub">
+        </form>
+        </div>
+    </div>
+    <div id="menu">
+        <ol>
+            <li onclick="home()">Home</li>
+            <li onclick="stock()">Stock</li>
+            <li onclick="purchase()">Purchase</li>
+            <li onclick="cart()">Cart</li>
+            <li onclick="historyy()">Order History</li>
+            <li onclick="recharge()">Recharge </li>
+            <li onclick="show()">show balance</li>
+            <li onclick="Logout()">Log Out</li>
+        </ol>
+    </div>
+    <div id="home">
+        <h1 class="wel1"><img id="imgTag"></h1>
+        <h1 id="welcome"></h1>
+    </div>
+    <div id="stock">
+        <button onclick="addGrocery()" class="medButton">Add Items</button>
+        <table id="tb">
+          
+                <thead>
+                  <tr>
+                        <th>Name</th>
+                        <th>Available Count</th>
+                        <th>Price Per Quantity</th>
+                        <th>Purchase Date</th>
+                        <th>Expiry Date</th>
+                        <th>Photo</th>
+                        <th>Modify</th>
+                   </tr>
+                </thead>
+                <tbody id="tbody1">
+
+                </tbody>
+           
+        </table>
+    </div>
+    <div id="purchase">
+        <div id="product-cont">
+
+        </div>
+    </div>
+    <div id="cart">
+        
+        <table id="tb2">
+            <tr>
+                <thead>
+                    <th>Name</th>
+                    <th>Count</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </thead>
+                <tbody id="tbody3">
+
+                </tbody>
+            </tr>
+         </table>
+         <button onclick="buy()" class="medButton">Buy</button>
+    </div>
+    <div id="history">
+        <!-- <div id="tab">
+            <h2>orderDate</h2>
+            <h2>Price</h2>
+            <button onclick="exportData()">Export</button>
+        </div>
+        
+        <table id="tb3">
+            <thead>
+                <tr>
+                    <th>OrderID</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan=""></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            
+         </table> -->
+    </div>
+    <div id="top">
+        <h1 id="curBalance"></h1>
+        <input type="number" placeholder="Enter the Amount " id="amount" required>
+        <button onclick="deposit()">Deposit</button>
+    </div>
+    <div id="show">
+        <h1 id="balance"></h1>
+    </div>
+    <!--  -->
+    <!-- <div class="product-card">
+        <img src="" alt="">
+        <div class="product-info">
+            <h2></h2>
+            <p></p>
+        </div>
+        <button>Add To Cart</button>
+    </div> -->
+    <!--  -->
+    
+    <div id="form1">
+        <h1>Grocery Details</h1>
+        <input type="text" id="itemName" placeholder="Product Name">
+        <input type="number" id="itemCount" placeholder="Product Count">
+        <input type="number" id="itemPrice" placeholder="Product Price">
+        <input type="date" id="purchaseDate" placeholder="Purchase Date">
+        <input type="date" id="expiryDate" placeholder="Expiry Date">
+        <input type="file" id="itemImage">
+        <button onclick="addProductTo()">submit</button>
+    </div>
+
+    <script type="text/javascript" src="Typescript/index.js"></script>
+</body>
+</html>

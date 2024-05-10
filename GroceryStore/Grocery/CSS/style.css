@@ -1,0 +1,289 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.sign{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+}
+.sign h1:nth-child(1){
+    /* background-color:orange; */
+    border-radius: 10px;
+    padding: 5px;
+}
+.sign h1:nth-child(2){
+    background-color:orange;
+    border-radius: 10px;
+    padding: 5px;
+}
+#box{
+    width: 50%;
+    margin: 20vh auto;
+}
+#menu{
+    display:none;
+}
+#menu ol{
+    display: flex;
+    list-style-type: none;
+    width:80%;
+    margin: auto;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    color:white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+#menu ol li{
+    padding: 10px;
+    border-radius: 10px;
+}
+#menu ol li:hover{
+    background-color:lightskyblue ;
+    color: black;
+    
+}
+#signup{
+    padding: 20px;
+    border:2px solid green;
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+}
+#signin{
+    padding: 20px;
+    border:2px solid green;
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+    display:none;
+}
+#signup input,#signin input{
+    width: 100%;
+    margin:2% auto;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    text-indent: 3%;
+    border-radius: 10px;
+    border: 2px solid blue;
+    box-shadow: 2px 2px 2px gray;
+
+}
+.sub{
+    width: 100%;
+    margin:2% auto;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    border: 2px solid orangered;
+    box-shadow: 2px 2px 2px gray;
+}
+#welcome,#balance,#curBalance,.wel1{
+    font-size: 5rem;
+    text-align: center;
+}
+#top input{
+    width: 40%;
+    margin:2% auto;
+    line-height: 4rem;
+    font-size: 2rem;
+    text-indent: 3%;
+    border-radius: 10px;
+    border: 2px solid blue;
+    box-shadow: 2px 2px 2px gray;
+    display: block;
+}
+#top button{
+    display: block;
+    margin: auto;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    border: 2px solid green;
+    box-shadow: 2px 2px 2px gray;
+}
+#top{
+    display: none;
+}
+.medButton{
+    display: block;
+    width: 10%;
+    border: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    margin:5vh auto ;
+    background-color: green; 
+}
+#stock,#purchase,#history,#cart{
+    margin-top: 10vh;
+    margin-bottom:5vh;
+    display: none;
+}
+#tb1,#tb3,#tb2{
+    width:70%;
+    margin: auto;
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+#tb{
+    width:90%;
+    margin: auto;
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+#tb td,#tb th{
+    text-align: center;
+    border: 2px solid gray;
+    padding: 7px; 
+}
+#tb td img{
+    border-radius: 10%;
+    width:30vh;
+    height:20vh;
+}
+#tb td,#tb th,#tb1 td,#tb1 th,#tb3 td,#tb3 th,#tb2 td,#tb2 th{
+    text-align: center;
+    border: 2px solid gray;
+    padding: 5px;
+}
+#tb td button,#tb1 td button,#tb2 td button{
+    border: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    margin: 0px 5px;
+}
+#tb2 td button{
+    background-color: red;
+}
+#tb td button:nth-child(1){
+    background-color: blue;
+    
+}
+#tb1 td button{
+    background-color: green;
+    
+}
+#tb3 td button{
+    border: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    margin: 0px 5px;
+    background-color: red;
+    
+}
+#tb td button:nth-child(2){
+    background-color: red;
+  
+}
+
+#form1{
+    margin-top: 5vh;
+    display: none;
+    width:40%;
+    margin: auto;
+    border:2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+#form1 input{
+    width: 50%;
+    margin:2% auto;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    text-indent: 3%;
+    border-radius: 10px;
+    border: 2px solid blue;
+    box-shadow: 2px 2px 2px gray;
+    display: block;
+}
+#form1 h1{
+    text-align: center;
+}
+#form1 button{
+    display: block;
+    width: 50%;
+    border: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    margin: auto;
+    background-color: green;
+    /* margin: 0px 5px; */
+}
+.wel1 img{
+    border-radius: 50%;
+    width:30vh;
+    height:30vh;
+}
+#product-cont{
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.product-card{
+    flex: 0 0 calc(40%-18px);
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.product-card img{
+    width: 100%;
+    border-radius: 10px;
+}
+.product-info{
+    display: flex;
+    justify-content: space-between;
+}
+.product-info h2{
+    text-transform: uppercase;
+    /* font-size: 1.5rem; */
+    font-weight: bold;
+    padding: 0px;
+}
+.product-card button{
+    background-color:red;
+    width: 100%;
+    color:white;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    border: none;
+    padding: 8px 16px;
+    margin: 10px 0px;
+}
+#tab{
+    margin-top: 10vh;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#tab button{
+    align-self: center;
+    border: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: white;
+    /* margin:5vh auto ; */
+    background-color: green; 
+}
